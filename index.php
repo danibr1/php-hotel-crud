@@ -8,7 +8,7 @@
 
 <body>
     <main class="container">
-        <h1 class="my-4">ELENCO STANZE HOTEL</h1>
+        <h1 class="my-4">ROOMS LIST</h1>
 
         <table class="table">
             <!-- Table Head   -->
@@ -16,9 +16,7 @@
                 <tr>
                     <th>ID</th>
                     <th>ROOM NUMBER</th>
-                    <th>FLOOR</th>
-                    <th>BEDS</th> 
-                    <th></th>
+                    <th>Details</th>
                 </tr>
             </thead>
             
@@ -30,11 +28,9 @@
                          <tr>
                             <td><?php echo $room['id'] ?></td>
                             <td><?php echo $room['room_number'] ?></td>
-                            <td><?php echo $room['floor'] ?></td>
-                            <td><?php echo $room['beds'] ?></td>
                             <td>
                                 <a class="text-success" 
-                                    href="./show.php?id=<?php echo $room['id']; ?>">
+                                    href="./details.php?id=<?php echo $room['id']; ?>">
                                     View Room Details
                                 </a>
                             </td>
@@ -42,12 +38,8 @@
                     <?php } 
                 }
                 ?>
-            
             </tbody>
         </table>
-
-
     </main>
-    
 </body>
 </html>
